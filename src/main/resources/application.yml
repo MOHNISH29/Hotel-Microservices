@@ -1,9 +1,9 @@
 server:
-  port: 9090
+  port: 9091
   
 spring:
   datasource:
-        url: jdbc:mysql://localhost:3306/userdb
+        url: jdbc:mysql://localhost:3306/hoteldb
         username: root
         password : villeparle
         driver-class-name : com.mysql.cj.jdbc.Driver
