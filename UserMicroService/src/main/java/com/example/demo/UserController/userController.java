@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 import com.example.demo.Entity.User;
 import com.example.demo.Services.UserService;
@@ -21,6 +22,8 @@ public class userController {
 	
 	@Autowired
 	public UserService userService;
+	
+	
 	
 	@PostMapping("/")
 	public ResponseEntity<User> saveUser(@RequestBody User user)
@@ -34,6 +37,8 @@ public class userController {
 	{
 		User user1 = userService.getUserById(userId);
 		return  ResponseEntity.ok(user1);
+		
+		
 		
 	}
 	
